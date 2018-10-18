@@ -39,9 +39,9 @@ Follow the following steps to simulate EEG data for 5 users, write it into a dyn
 Assumption: You already have an AWS account created and you have your access key ID and access secret stored securely on your system. To understand how to create your access Key ID/secret pair, follow the steps in manual available at: https://s3.amazonaws.com/ontimesocial-humhub/Manual+to+setup+AWS+.pdf
 
 1. Download https://s3.amazonaws.com/ontimesocial-humhub/runthis.tar.gz  
-2. unzip using tar -xzvf runthis.tar.gz. 
+2. unzip with tar -xzvf runthis.tar.gz. 
 3. Edit runthis1.sh and runthis2.sh to include your Access Key Id and Access Secret. 
-4. Open another terminal and run runthis1.sh in one terminal and runthis2.sh on the second terminal. 
+4. Run runthis1.sh in one terminal and runthis2.sh on the second terminal. 
 
 Open your browser and go to "ipaddress:8080" to view the visualization of simulated EEG data for 5 users. 
 
@@ -50,7 +50,7 @@ a) Open visualApp/src/main/java/org/example/basicApp/ddb/DynamoDBWriter.java
 
 b) Line 70, change numUsers=5 to 10,15 ...etc.
 
-
+# To view EEG visualization at the EEG tab on the portal, include the system's ipaddress in the index.php located at: ~/visualApp/protected/humhub/modules/session/views/eeg/index.php . 
 ---------------------------------------------------------------------------------------------
 
 Thank you for coming to this project and in case of any issues, comments or suggestions, please contact Sai Nuguri at saisn.67@gmail.com, Songjie Wang at wangso@missouri.edu or Dr. Prasad Calyam at calyamp@missouri.edu.
