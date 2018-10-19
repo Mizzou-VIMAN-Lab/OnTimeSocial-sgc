@@ -50,7 +50,7 @@ a) Open visualApp/src/main/java/org/example/basicApp/ddb/DynamoDBWriter.java
 
 b) Line 70, change numUsers=5 to 10,15 ...etc.
 
-# To view EEG visualization at the EEG tab on the portal, include the system's ipaddress in the index.php located at: ~/visualApp/protected/humhub/modules/session/views/eeg/index.php . 
+# To view EEG visualization at the EEG tab on the portal, include the system's ipaddress in the index.php located at: ~/humhub/protected/humhub/modules/session/views/eeg/index.php . 
 ---------------------------------------------------------------------------------------------
 
 Thank you for coming to this project and in case of any issues, comments or suggestions, please contact Sai Nuguri at saisn.67@gmail.com, Songjie Wang at wangso@missouri.edu or Dr. Prasad Calyam at calyamp@missouri.edu.
