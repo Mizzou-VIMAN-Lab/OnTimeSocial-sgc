@@ -21,7 +21,7 @@ The following steps will automate the installation of the Portal on your machine
 
 Download Docker by downloading and running shell script available at: https://s3.amazonaws.com/ontimesocial-humhub/dockerinstall.sh
 
-The shell script downloads Docker, pulls the HumHub docker image from DockerHub (https://hub.docker.com/r/acarjungowda/vsocial/) and runs it. 
+The shell script downloads Docker, pulls the HumHub docker image from DockerHub (https://hub.docker.com/r/saisn67/vsocial/) and runs it. 
 
 You can view the portal at: "https://ip-address/humhub". 
 
