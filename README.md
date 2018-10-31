@@ -46,6 +46,7 @@ Assumption: You already have an AWS account created and you have your access key
 Open your browser and go to "ipaddress:8080" to view the visualization of simulated EEG data for 5 users. 
 
 To change the number of users:
+
 a) Open visualApp/src/main/java/org/example/basicApp/ddb/DynamoDBWriter.java
 
 b) Line 70, change numUsers=5 to 10,15 ...etc.
@@ -56,16 +57,22 @@ To view EEG visualization at the EEG tab on the portal, include the system's ipa
 Demo Videos available:
 
 A) Visualization of 50 users with custom range select:  
+     
      Youtube video link: https://www.youtube.com/watch?v=UGRQ2YlC5tw 
 
 B) Visualization of 100 users with custom range select: 
+     
      Youtube video link: https://www.youtube.com/watch?v=UQbZ6r2NM3o 
 
 C)  Visualization of 200 users with custom range select: 
+     
      Youtube video link: https://www.youtube.com/watch?v=zqbiK29KCYo 
 
 D) OnTimeSocial integration with 200 users with custom range select: 
+     
      Youtube video link: https://www.youtube.com/watch?v=UDGotsFWh78 
+
+-----------------------------------------------------------------------------
 
 Thank you for coming to this project and in case of any issues, comments or suggestions, please contact Sai Nuguri at saisn.67@gmail.com, Songjie Wang at wangso@missouri.edu or Dr. Prasad Calyam at calyamp@missouri.edu.
 
