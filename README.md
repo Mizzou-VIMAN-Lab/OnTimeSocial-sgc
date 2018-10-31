@@ -54,6 +54,7 @@ To view EEG visualization at the EEG tab on the portal, include the system's ipa
 ---------------------------------------------------------------------------------------------
 
 Demo Videos available:
+
 A) Visualization of 50 users with custom range select:  
      Youtube video link: https://www.youtube.com/watch?v=UGRQ2YlC5tw 
 
