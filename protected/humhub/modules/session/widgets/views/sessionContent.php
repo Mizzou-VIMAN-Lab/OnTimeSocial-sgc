@@ -48,6 +48,32 @@ extract($_GET);
                     }
                 ],
             ],
+            /* Added warning attribute and actions*/
+            [
+                'attribute' => 'warning',
+                'options' => ['style' => 'width:100px;'],
+                'format' => 'raw',
+                'value' => function($data) {
+                    return Html::textInput('warning', $data->warning, ['id' => 'warning'.$data->user_id,'class' => 'form-control', 'readOnly' => true]);
+                },
+            ],
+            [
+                'header' => Yii::t('AdminModule.views_user_index', 'Actions'),
+                'class' => 'yii\grid\ActionColumn',
+                'options' => ['style' => 'width:80px; min-width:80px;'],
+                'buttons' => [
+                    'view' => function($url, $model) {
+                        $eleID = 'warning';
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=> 'addValue("warning", '.$model->user_id.')']);
+                    },
+                    'udpate' => function() {
+                        return;
+                    },
+                    'delete' => function($url, $model) {
+                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("warning", '.$model->user_id.')']);
+                    }
+                ],
+            ],
             [
                 'attribute' => 'strike',
                 'options' => ['style' => 'width:100px;'],
@@ -141,9 +167,10 @@ extract($_GET);
         id = val;
         var old_value = parseInt(document.getElementById(eleID.concat(id)).value);
 
-        if (eleID == "pass" && old_value == 3)
-        {
+        if (eleID == "pass" && old_value == 3) {
             document.getElementById(eleID.concat(id)).value = 3;    
+        } else if(eleID == "warning" && old_value == 1) {
+            document.getElementByID(eleID.concat(id)).value = 1;
         } else {
             document.getElementById(eleID.concat(id)).value = add(old_value);
         }
@@ -161,6 +188,7 @@ extract($_GET);
         var row = $(this).parents('tr');
         var tokenID = row.attr('data-key');
         var pass = row.find('#pass'.concat(id)).val();
+        //var warning = row.find('#warning'.concact(id)).val();
         var strike = row.find('#strike'.concat(id)).val();
         var tokens = row.find('#token'.concat(id)).val();
 
