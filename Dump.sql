@@ -1856,6 +1856,7 @@ CREATE TABLE `tokens` (
   `session_id` int(11) NOT NULL,
   `tokens` int(11) DEFAULT NULL,
   `pass` int(11) DEFAULT NULL,
+  `warning` int(11) DEFAULT NULL,
   `strike` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tokens_session_id_idx` (`session_id`),
