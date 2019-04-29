@@ -48,7 +48,7 @@ extract($_GET);
                     }
                 ],
             ],
-            /* Added warning attribute and actions*/
+            /* Added the warning attribute and actions*/
             [
                 'attribute' => 'warning',
                 'options' => ['style' => 'width:100px;'],
@@ -188,13 +188,13 @@ extract($_GET);
         var row = $(this).parents('tr');
         var tokenID = row.attr('data-key');
         var pass = row.find('#pass'.concat(id)).val();
-        //var warning = row.find('#warning'.concact(id)).val();
+        var warning = row.find('#warning'.concact(id)).val();
         var strike = row.find('#strike'.concat(id)).val();
         var tokens = row.find('#token'.concat(id)).val();
 
         $.ajax({
             method:'POST',
-            data:{tokenID:tokenID, pass:pass, strike:strike, tokens:tokens},
+            data:{tokenID:tokenID, warning:warning, pass:pass, strike:strike, tokens:tokens},
             dataType:'text',
             success:function(result){
                 // alert(result);

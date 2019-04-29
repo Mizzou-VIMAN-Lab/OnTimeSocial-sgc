@@ -32,6 +32,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
                             'user.username',
                             'session.session_name',
                             'token.pass',
+                            'warning.warning',
                             'token.strike',
                             'token.tokens',
                             'description',

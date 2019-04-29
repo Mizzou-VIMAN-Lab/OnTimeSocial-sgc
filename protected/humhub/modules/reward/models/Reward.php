@@ -74,6 +74,7 @@ class Reward extends ContentContainerActiveRecord
             'rewarded_by' => 'Rewarded By',
             'rewardcol' => 'Rewardcol',
             'token.pass' => 'Pass',
+            'token.warning' => 'Warning',
             'token.strike' => 'Strike',
             'contentcontainer_id' => 'Contentcontainer ID',
             'url' => 'Url',

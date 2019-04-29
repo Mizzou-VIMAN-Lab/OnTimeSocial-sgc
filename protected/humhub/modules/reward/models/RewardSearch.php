@@ -80,6 +80,7 @@ class RewardSearch extends Reward
                 'user.username',
                 'session.session_name',
                 'token.pass',
+                'token.warning',
                 'token.strike',
                 'token.tokens',
                 'description',
