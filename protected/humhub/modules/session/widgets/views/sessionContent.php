@@ -170,8 +170,12 @@ extract($_GET);
 
         if (eleID == "pass" && old_value == 3) {
             document.getElementById(eleID.concat(id)).value = 3;    
-        } else if(eleID == "warning" && old_value == 1) {
+        } 
+        /*
+        else if(eleID == "warning" && old_value == 1) {
             document.getElementByID(eleID.concat(id)).value = 1;
+        } 
+        */
         } else {
             document.getElementById(eleID.concat(id)).value = add(old_value);
         }
@@ -189,13 +193,13 @@ extract($_GET);
         var row = $(this).parents('tr');
         var tokenID = row.attr('data-key');
         var pass = row.find('#pass'.concat(id)).val();
-        var warning = row.find('#warning'.concact(id)).val();
+        //var warning = row.find('#warning'.concact(id)).val();
         var strike = row.find('#strike'.concat(id)).val();
         var tokens = row.find('#token'.concat(id)).val();
 
         $.ajax({
             method:'POST',
-            data:{tokenID:tokenID, warning:warning, pass:pass, strike:strike, tokens:tokens},
+            data:{tokenID:tokenID, /*warning:warning,*/ pass:pass, strike:strike, tokens:tokens},
             dataType:'text',
             success:function(result){
                 // alert(result);

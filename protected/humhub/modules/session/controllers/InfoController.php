@@ -49,15 +49,15 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
     public function actionIndex()
     {
 
-        if(isset($_POST["tokenID"]) && isset($_POST["warning"]) && isset($_POST["pass"]) && isset($_POST["strike"]) && isset($_POST["tokens"])){
+        if(isset($_POST["tokenID"]) /*&& isset($_POST["warning"])*/ && isset($_POST["pass"]) && isset($_POST["strike"]) && isset($_POST["tokens"])){
             $tokenID = $_POST["tokenID"];
-            $warning = $_POST["warning"];
+            //$warning = $_POST["warning"];
             $pass = $_POST["pass"];
             $strike = $_POST["strike"];
             $tokens = $_POST["tokens"];
 
             $tokenModel = Tokens::findOne(['id' => $tokenID]);
-            $tokenModel->warning = $warning;
+            // $tokenModel->warning = $warning;
             $tokenModel->pass = $pass;
             $tokenModel->strike = $strike;
             $tokenModel->tokens = $tokens;
