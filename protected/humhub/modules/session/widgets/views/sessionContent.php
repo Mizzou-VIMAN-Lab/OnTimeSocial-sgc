@@ -48,13 +48,13 @@ extract($_GET);
                     }
                 ],
             ],
-            /* Added the warning attribute and actions
+            /* Added the warning attribute and actions */
             [
-                'attribute' => 'warning',
+                'attribute' => 'pass',
                 'options' => ['style' => 'width:100px;'],
                 'format' => 'raw',
                 'value' => function($data) {
-                    return Html::textInput('warning', $data->warning, ['id' => 'warning'.$data->user_id,'class' => 'form-control', 'readOnly' => true]);
+                    return Html::textInput('pass', $data->pass, ['id' => 'pass'.$data->user_id,'class' => 'form-control', 'readOnly' => true]);
                 },
             ],
             [
@@ -63,18 +63,18 @@ extract($_GET);
                 'options' => ['style' => 'width:80px; min-width:80px;'],
                 'buttons' => [
                     'view' => function($url, $model) {
-                        $eleID = 'warning';
-                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=> 'addValue("warning", '.$model->user_id.')']);
+                        $eleID = 'pass';
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=>'addValue("pass",'.$model->user_id.')']);
                     },
-                    'udpate' => function() {
+                    'update' => function() {
                         return;
                     },
                     'delete' => function($url, $model) {
-                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("warning", '.$model->user_id.')']);
+                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("pass",'.$model->user_id.')']);
                     }
                 ],
             ],
-            */
+            
             [
                 'attribute' => 'strike',
                 'options' => ['style' => 'width:100px;'],
@@ -169,8 +169,7 @@ extract($_GET);
         var old_value = parseInt(document.getElementById(eleID.concat(id)).value);
 
         if (eleID == "pass" && old_value == 3) {
-            document.getElementById(eleID.concat(id)).value = 3;    
-        } 
+            document.getElementById(eleID.concat(id)).value = 3;  
         /*
         else if(eleID == "warning" && old_value == 1) {
             document.getElementByID(eleID.concat(id)).value = 1;
