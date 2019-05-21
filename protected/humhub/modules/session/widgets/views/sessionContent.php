@@ -64,13 +64,13 @@ extract($_GET);
                 'buttons' => [
                     'view' => function($url, $model) {
                         $eleID = 'warning';
-                        return; //Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=>'addValue("warning",'.$model->user_id.')']);
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=>'addValue("warning",'.$model->user_id.')']);
                     },
                     'update' => function() {
                         return;
                     },
                     'delete' => function($url, $model) {
-                        return; //Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("warning",'.$model->user_id.')']);
+                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("warning",'.$model->user_id.')']);
                     }
                 ],
             ],
