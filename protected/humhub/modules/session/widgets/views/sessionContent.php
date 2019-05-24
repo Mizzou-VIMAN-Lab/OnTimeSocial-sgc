@@ -48,7 +48,7 @@ extract($_GET);
                     }
                 ],
             ],
-            /* Added the warning attribute and actions */
+            /* Added the warning attribute and actions 
             [
                 'attribute' => 'warning',
                 'options' => ['style' => 'width:100px;'],
@@ -74,7 +74,7 @@ extract($_GET);
                     }
                 ],
             ],
-            
+            */
             [
                 'attribute' => 'strike',
                 'options' => ['style' => 'width:100px;'],
