@@ -183,7 +183,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,'Nike – Just buy it. ;Wink;','humhub\\modules\\post\\models\\Post',2,'2018-08-12 17:53:13',2,'2018-08-12 17:53:13',2),(2,'Calvin Klein – Between love and madness lies obsession.','humhub\\modules\\post\\models\\Post',2,'2018-08-12 17:53:13',3,'2018-08-12 17:53:13',3),(3,'Why don\'t we go to Bemelmans Bar?','humhub\\modules\\polls\\models\\Poll',1,'2018-08-12 17:53:14',2,'2018-08-12 17:53:14',2),(4,'Again? ;Weary;','humhub\\modules\\polls\\models\\Poll',1,'2018-08-12 17:53:15',3,'2018-08-12 17:53:15',3');
+INSERT INTO `comment` VALUES (1,'Nike – Just buy it. ;Wink;','humhub\\modules\\post\\models\\Post',2,'2018-08-12 17:53:13',2,'2018-08-12 17:53:13',2),(2,'Calvin Klein – Between love and madness lies obsession.','humhub\\modules\\post\\models\\Post',2,'2018-08-12 17:53:13',3,'2018-08-12 17:53:13',3),(3,"Why don't we go to Bemelmans Bar?",'humhub\\modules\\polls\\models\\Poll',1,'2018-08-12 17:53:14',2,'2018-08-12 17:53:14',2),(4,'Again? ;Weary;','humhub\\modules\\polls\\models\\Poll',1,'2018-08-12 17:53:15',3,'2018-08-12 17:53:15',3);
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
