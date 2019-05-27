@@ -38,17 +38,17 @@ extract($_GET);
                 'buttons' => [
                     'view' => function($url, $model) {
                         $eleID = 'pass';
-                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addWarning btn btn-success btn-sm tt', 'onclick'=>'addValue("pass",'.$model->user_id.')']);
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addPass btn btn-success btn-sm tt', 'onclick'=>'addValue("pass",'.$model->user_id.')']);
                     },
                     'update' => function() {
                         return;
                     },
                     'delete' => function($url, $model) {
-                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractWarning btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("pass",'.$model->user_id.')']);
+                        return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractPass btn btn-danger btn-sm tt', 'onclick'=>'subtractValue("pass",'.$model->user_id.')']);
                     }
                 ],
             ],
-            /* Added the warning attribute and actions */
+            /* Added the warning attribute and actions 
             [
                 'attribute' => 'warning',
                 'options' => ['style' => 'width:100px;'],
@@ -74,7 +74,7 @@ extract($_GET);
                     }
                 ],
             ],
-            
+            */
             [
                 'attribute' => 'strike',
                 'options' => ['style' => 'width:100px;'],
@@ -170,9 +170,12 @@ extract($_GET);
 
         if (eleID == "pass" && old_value == 3) {
             document.getElementById(eleID.concat(id)).value = 3;  
-        } else if(eleID == "warning" && old_value == 1) {
+        } 
+        /*
+        else if(eleID == "warning" && old_value == 1) {
             document.getElementByID(eleID.concat(id)).value = 1;
-        } else {
+        }
+        */ else {
             document.getElementById(eleID.concat(id)).value = add(old_value);
         }
 
@@ -189,13 +192,13 @@ extract($_GET);
         var row = $(this).parents('tr');
         var tokenID = row.attr('data-key');
         var pass = row.find('#pass'.concat(id)).val();
-        var warning = row.find('#warning'.concact(id)).val();
+        //var warning = row.find('#warning'.concact(id)).val();
         var strike = row.find('#strike'.concat(id)).val();
         var tokens = row.find('#token'.concat(id)).val();
 
         $.ajax({
             method:'POST',
-            data:{tokenID:tokenID, warning:warning, pass:pass, strike:strike, tokens:tokens},
+            data:{tokenID:tokenID, /*warning:warning,*/ pass:pass, strike:strike, tokens:tokens},
             dataType:'text',
             success:function(result){
                 // alert(result);

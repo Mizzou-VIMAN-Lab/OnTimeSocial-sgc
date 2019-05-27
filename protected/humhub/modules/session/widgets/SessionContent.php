@@ -43,7 +43,7 @@ class SessionContent extends Widget
             'attributes' => [
                 'user.username',
                 'pass',
-                'warning',
+                //'warning',
                 'strike',
                 'tokens'
             ]
