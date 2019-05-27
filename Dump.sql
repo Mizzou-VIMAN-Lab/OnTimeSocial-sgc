@@ -1847,7 +1847,7 @@ UNLOCK TABLES;
 -- Table structure for table `tokens`
 --
 
-DROP TABLE IF EXISTS `tokens`;
+/*DROP TABLE IF EXISTS `tokens`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tokens` (
