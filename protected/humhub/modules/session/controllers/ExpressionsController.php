@@ -1,4 +1,7 @@
 <?php
+/**
+ * Developed my Roland Oruche, University of Missouri
+ */
 
 namespace humhub\modules\session\controllers;
 

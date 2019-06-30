@@ -1,5 +1,9 @@
 <?php
 /**
+ * Developed my Roland Oruche, University of Missouri
+ */
+
+/**
  * @var \humhub\modules\user\models\User $contentContainer
  * @var bool $showProfilePostForm
  */
