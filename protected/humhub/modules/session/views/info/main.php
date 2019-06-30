@@ -14,6 +14,5 @@ $session = $this->context->contentContainer;
             <?php echo \humhub\modules\session\widgets\Menu::widget(['session' => $session]); ?>
             <br>
         </div>
-            <?= $content; ?>
     </div>
 </div>
