@@ -58,7 +58,7 @@ class Menu extends \humhub\widgets\BaseMenu
         $this->addItem(array(
             'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'Facial Expressions'),
             'group' => 'modules',
-            'url' => $this->session->createUrl('/session/eeg'),
+            'url' => $this->session->createUrl('/session/info'),
             'icon' => '<i class="fa fa-smile-o"></i>',
             'sortOrder' => 100,
             'isActive' => (Yii::$app->controller->id == "eeg" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session")
