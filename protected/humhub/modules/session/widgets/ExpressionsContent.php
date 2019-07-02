@@ -27,6 +27,13 @@ class ExpressionsContent extends Widget {
 
     public function run() 
     {
-        return $this->render("expressionsContent");
+        $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
+        $session = $this->contentContainer;
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            ]);
+
+        return $this->render('expressionsContent', ['session' => $this->contentContainer,   'members' => $query->all()]);
     }
 }
