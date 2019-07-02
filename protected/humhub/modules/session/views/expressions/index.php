@@ -18,6 +18,7 @@ $session = $this->context->contentContainer;
             <br>
         </div>
             <?= \humhub\modules\session\widgets\ExpressionsContent::widget([
-                    'contentContainer' => $session]) ?>
+                    'contentContainer' => $session
+            ]) ?>
     </div>
 </div>

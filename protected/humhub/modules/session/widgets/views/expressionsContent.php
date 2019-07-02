@@ -18,5 +18,5 @@ use humhub\modules\session\widgets\ExpressionsContent;
 ?>
 
 <div>
-    <p>Hello World(2)</p>
+    <p style="color: orange;">TODO for tomorrow</p>
 </div>
