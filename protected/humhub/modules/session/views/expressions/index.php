@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $session = $this->context->contentContainer;
 ?>
 
-<?php $this->beginContent('@humhub/modules/session/views/info/main.php') ?>
+<?php $this->beginContent('@humhub/modules/session/views/info/_layout.php') ?>
 
 <body>
     <div> 
