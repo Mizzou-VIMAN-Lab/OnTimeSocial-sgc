@@ -10,7 +10,7 @@ use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\SessionMembership;
 use humhub\modules\content\components\ContentContainerActiveRecord;
 
-class SessionContent extends Widget
+class ExpressionsContent extends Widget
 {
     /**
      * @var string
@@ -49,7 +49,12 @@ class SessionContent extends Widget
             ]
         ]);
 
-       
+        if ($role == 'Student')
+        {
+            return $this->render('studentSessionContent', [
+                'dataProvider' => $dataProvider,
+            ]);
+        }
         return $this->render('expressionsContent', [
                 'dataProvider' => $dataProvider,
             ]);
