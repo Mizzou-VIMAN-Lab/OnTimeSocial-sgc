@@ -7,11 +7,21 @@ use yii\helpers\Html;
 $session = $this->context->contentContainer;
 ?>
 
-<?php $this->beginContent('@humhub/modules/session/views/info/main.php') ?>
-
-<div class="container">
-    <div class="col-md-10 panel layout-content-container">
-        <p>Hello, World! Hope This works!!</p>
+<div class="container session-layout-container">
+    <div class="row">
+        <div class="col-md-12">
+            <?php echo humhub\modules\session\widgets\Header::widget(['session' => $session]); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 layout-nav-container">
+            <?php echo \humhub\modules\session\widgets\Menu::widget(['session' => $session]); ?>
+            <br>
+        </div>
+        <div class="container">
+            <div class="col-md-10 panel layout-content-container">
+                <p>Hello, World! Hope This works!!</p>
+            </div>
+        </div>
     </div>
 </div>
-<?php $this->endContent(); ?>
