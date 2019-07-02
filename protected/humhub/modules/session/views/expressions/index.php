@@ -21,10 +21,10 @@ $session = $this->context->contentContainer;
         <div class="container">
             <div class="col-md-10 panel layout-content-container">
                 <p>Hello, World! Hope This works!!</p>
-                <?= \humhub\modules\session\widgets\ExpressionsContent::widget([
-                    'contentContainer' => $session
-                    //'content' => $content
-                ]) ?>
+                <?php /* echo \humhub\modules\session\widgets\ExpressionsContent::widget(['session' => $session]); */?>
+                <!-- 
+                    Get content from ExpressionsContent class
+                -->
             </div>
         </div>
     </div>
