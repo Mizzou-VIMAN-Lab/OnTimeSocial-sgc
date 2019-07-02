@@ -16,14 +16,34 @@ use humhub\modules\content\components\ContentContainerActiveRecord;
 class ExpressionsContent extends Widget 
 {
     /**
-     * @var Widget
+     * @var string
      */
-    public $session;
+    public $content = '';
 
-    public function run() 
+    /**
+     * @var ContentContainerActiveRecord
+     */
+    public $contentContainer;
+
+    public function run()
     {
-        return $this->render('expressionsContent', [
-            'session' => $this->session,
+        $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
+        $session = $this->contentContainer;
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            ]);
+
+        $dataProvider->setSort([
+            'attributes' => [
+                'username',
+            ]
         ]);
+        // return $this->content;
+        // return $this->render('eegcontent', [
+        //         'dataProvider' => $dataProvider
+        //     ]);
+
+        return $this->render('expressionsContent', ['session' => $this->contentContainer,   'members' => $query->all()]);
     }
 }
