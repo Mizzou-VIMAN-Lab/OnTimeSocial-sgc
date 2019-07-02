@@ -18,14 +18,7 @@ use humhub\modules\session\widgets\ExpressionsContent;
 ?>
 
 
-<?php 
-    /*
-    $filename = 'protected/humhub/modules/session/views/expressions/Student1.txt';
-    
-    $myFile = fopen($filename, "r") or die("Unable to open file!");
-    echo fread($myFile, filesize($filename));
-    fclose($myFile);
-    */
+<?php
     foreach(glob("protected/humhub/modules/session/views/expressions/*.txt") as $filename) {
         $file = fopen($filename, "r");
         while(!feof($file)) {
