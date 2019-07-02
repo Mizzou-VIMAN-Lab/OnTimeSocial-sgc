@@ -7,12 +7,11 @@ use yii\helpers\Html;
 $session = $this->context->contentContainer;
 ?>
 
-<?php $this->beginContent('@humhub/modules/session/views/info/home.php') ?>
+<?php $this->beginContent('@humhub/modules/session/views/info/main.php') ?>
 
-<body>
-    <div> 
-        <p>"Hello, World! Hope this works!";</p>
+<div class="container">
+    <div class="col-md-10 panel layout-content-container">
+        <p>Hello, World! Hope This works!!</p>
     </div>
-</body>
-
+</div>
 <?php $this->endContent(); ?>
