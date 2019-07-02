@@ -3,7 +3,6 @@
  * Developed my Roland Oruche, University of Missouri
  */
 
-use yii\helpers\Html;
 $session = $this->context->contentContainer;
 ?>
 <div class="container session-layout-container">
@@ -18,6 +17,7 @@ $session = $this->context->contentContainer;
             <?php echo \humhub\modules\session\widgets\Menu::widget(['session' => $session]); ?>
             <br>
         </div>
-            <?= $content; ?>
+            <?= \humhub\modules\session\widgets\ExpressionsContent::widget([
+                    'contentContainer' => $session]) ?>
     </div>
 </div>
