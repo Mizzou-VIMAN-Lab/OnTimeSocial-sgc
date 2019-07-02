@@ -27,6 +27,6 @@ class ExpressionsContent extends Widget {
 
     public function run() 
     {
-        echo "Hello, World!(1)";
+        return $this->render("expressionsContent");
     }
 }
