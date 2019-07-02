@@ -17,6 +17,10 @@ use humhub\modules\session\widgets\ExpressionsContent;
 
 ?>
 
-<div>
-    <p style="color: orange;">TODO for tomorrow</p>
-</div>
+
+<?php 
+    $filename = 'protected/humhub/modules/session/views/expressions/Student1.txt';
+    $myFile = fopen($filename, "r") or die("Unable to open file!");
+    echo fread($myFile, filesize($filename));
+    fclose($myFile);
+?>
