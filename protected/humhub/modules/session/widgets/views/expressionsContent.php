@@ -26,11 +26,11 @@ use humhub\modules\session\widgets\ExpressionsContent;
     echo fread($myFile, filesize($filename));
     fclose($myFile);
     */
-    foreach(glob('protected/humhub/modules/session/views/expressions/*.txt') as $filename) {
+    foreach(glob("protected/humhub/modules/session/views/expressions/*.txt") as $filename) {
         $file = fopen($filename, "r");
         while(!feof($file)) {
             $line = fgets($file);
-            echo $line;
+            echo $line . "<br>";
         }
         fclose($file);
     }
