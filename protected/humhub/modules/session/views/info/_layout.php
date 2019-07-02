@@ -17,8 +17,8 @@ $session = $this->context->contentContainer;
         <div class="container">
             <div class="col-md-10 panel layout-content-container">
                 <?= \humhub\modules\session\widgets\SessionContent::widget([
-                    'contentContainer' => $session
-                    //'content' => $content
+                    'contentContainer' => $session,
+                    'content' => $content
                 ]) ?>
             </div>
         </div>
