@@ -13,7 +13,7 @@ use yii\helpers\Html;
 use \humhub\compat\CHtml;
 use yii\widgets\ActiveForm;
 use humhub\modules\space\models\Space;
-use humhub\modules\session\widgets\ExpressionsContents;
+use humhub\modules\session\widgets\ExpressionsContent;
 
 ?>
 
