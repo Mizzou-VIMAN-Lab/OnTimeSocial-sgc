@@ -13,24 +13,17 @@ use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\SessionMembership;
 use humhub\modules\content\components\ContentContainerActiveRecord;
 
-class ExpressionsContent extends Widget {
-    /** 
-     * @var string
-     */
-    public $content = '';
-
-
+class ExpressionsContent extends Widget 
+{
     /**
-     * @var ContentContainerActiveRecord
+     * @var Widget
      */
-    public $contentContatiner;
+    public $session;
 
     public function run() 
     {
-        //$query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
-        $session = $this->contentContainer;
-
-        //return $this->render("expressionsContent");
-        return $this->render('expressionsContent', ['session' => $this->contentContainer]);
+        return $this->render('expressionsContent', [
+            'session' => $this->session,
+        ]);
     }
 }
