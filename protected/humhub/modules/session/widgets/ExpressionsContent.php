@@ -39,11 +39,7 @@ class ExpressionsContent extends Widget
                 'username',
             ]
         ]);
-        // return $this->content;
-        // return $this->render('eegcontent', [
-        //         'dataProvider' => $dataProvider
-        //     ]);
 
-        return $this->render('expressionsContent', ['session' => $this->contentContainer,   'members' => $query->all()]);
+        return $this->render('expressionsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
     }
 }
