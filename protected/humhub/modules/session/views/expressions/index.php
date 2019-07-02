@@ -12,7 +12,6 @@ $session = $this->context->contentContainer;
 <body>
     <div> 
         <p>"Hello, World! Hope this works!";</p>
-        <?php echo \humhub\modules\session\widgets\ExpressionsContent::widget(['session' => $session]); ?>
     </div>
 </body>
 
