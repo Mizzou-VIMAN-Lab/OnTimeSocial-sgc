@@ -18,13 +18,16 @@ use humhub\modules\session\widgets\ExpressionsContent;
 ?>
 
 
-<?php
-    foreach(glob("protected/humhub/modules/session/views/expressions/*.txt") as $filename) {
-        $file = fopen($filename, "r");
-        while(!feof($file)) {
-            $line = fgets($file);
-            echo $line . "<br>";
+<div>
+    <?php
+        foreach(glob("protected/humhub/modules/session/views/expressions/*.txt") as $filename) {
+            $file = fopen($filename, "r");
+            while(!feof($file)) {
+                $line = fgets($file);
+                echo $line . "<br>";
+            }
+            fclose($file);
         }
-        fclose($file);
-    }
-?>
+    ?>
+</div>
+
