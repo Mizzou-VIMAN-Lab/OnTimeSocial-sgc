@@ -19,7 +19,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
         'columns' => [
             'user.username',
             'pass',
-            //'warning',
+            'warning', // Update warning clmn
             'strike',
             'tokens'
         ],
