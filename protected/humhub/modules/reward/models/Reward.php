@@ -73,8 +73,8 @@ class Reward extends ContentContainerActiveRecord
             'session_id' => 'Session ID',
             'rewarded_by' => 'Rewarded By',
             'rewardcol' => 'Rewardcol',
+            'token.warning' => 'Warning', //Update warning clmn
             'token.pass' => 'Pass',
-            //'token.warning' => 'Warning',
             'token.strike' => 'Strike',
             'contentcontainer_id' => 'Contentcontainer ID',
             'url' => 'Url',
