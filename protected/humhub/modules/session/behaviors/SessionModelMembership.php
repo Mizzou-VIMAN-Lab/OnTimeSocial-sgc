@@ -334,7 +334,6 @@ class SessionModelMembership extends Behavior
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
         
-        echo $tokens;
 
         $reward = new Reward();
         $reward->user_id = $userId;
