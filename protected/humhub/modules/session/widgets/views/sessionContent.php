@@ -190,7 +190,7 @@ extract($_GET);
         var row = $(this).parents('tr');
         var tokenID = row.attr('data-key');
         var pass = row.find('#pass'.concat(id)).val();
-        var warning = row.find('#warning'.concat(id)).val(); // Update warning clmn
+        var warning = row.find('#warning'.concat(id)).val();
         var strike = row.find('#strike'.concat(id)).val();
         var tokens = row.find('#token'.concat(id)).val();
 
