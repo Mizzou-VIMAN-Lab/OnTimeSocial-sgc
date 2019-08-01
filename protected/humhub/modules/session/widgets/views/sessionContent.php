@@ -38,14 +38,14 @@ extract($_GET);
                 'options' => ['style' => 'width:80px; min-width:80px;'],
                 'buttons' => [
                     'view' => function($url, $model) {
-                        //$eleID = 'warning';
-                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addWarning btn btn-success btn-sm tt' /*, 'onclick'=>'addValue("warning",'.$model->user_id.')'*/]);
+                        $eleID = 'warning';
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => '', 'class' => 'addWarning btn btn-success btn-sm tt' , 'onclick'=>'addValue("warning",'.$model->user_id.')']);
                     },
                     'update' => function() {
                         return;
                     },
                     'delete' => function($url, $model) {
-                    return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractWarning btn btn-danger btn-sm tt' /*, 'onclick'=>'subtractValue("warning",'.$model->user_id.')'*/]);
+                    return Html::button('<i class="fa fa-minus"></i>', ['id' => '', 'class' => 'subtractWarning btn btn-danger btn-sm tt' , 'onclick'=>'subtractValue("warning",'.$model->user_id.')']);
                     }
                 ],
             ],
@@ -170,11 +170,10 @@ extract($_GET);
         if (eleID == "pass" && old_value == 3) {
             document.getElementById(eleID.concat(id)).value = 3;  
         } 
-        /*
         else if(eleID == "warning" && old_value == 1) {
             document.getElementByID(eleID.concat(id)).value = 1;
         }
-        */ else {
+        else {
             document.getElementById(eleID.concat(id)).value = add(old_value);
         }
 
@@ -197,7 +196,7 @@ extract($_GET);
 
         $.ajax({
             method:'POST',
-            data:{tokenID:tokenID, /*warning:warning,*/ pass:pass, strike:strike, tokens:tokens},
+            data:{tokenID:tokenID, warning:warning, pass:pass, strike:strike, tokens:tokens},
             dataType:'text',
             success:function(result){
                 // alert(result);
