@@ -18,7 +18,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
         'dataProvider' => $dataProvider,
         'columns' => [
             'user.username',
-            //'warning', // Update warning clmn
+            'warning', // Update warning clmn
             'pass',
             'strike',
             'tokens'
