@@ -23,7 +23,7 @@ extract($_GET);
         'dataProvider' => $dataProvider,
         'columns' => [
             'user.username',
-            /* Added the warning attribute and actions 
+            /* Added the warning attribute and actions */
             [
                 'attribute' => 'warning',
                 'options' => ['style' => 'width:100px;'],
@@ -49,7 +49,6 @@ extract($_GET);
                     }
                 ],
             ],
-            */
             [
                 'attribute' => 'pass',
                 'options' => ['style' => 'width:100px;'],
