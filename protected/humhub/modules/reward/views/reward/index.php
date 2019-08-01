@@ -31,8 +31,8 @@ use humhub\modules\admin\widgets\SpaceGridView;
                             ],
                             'user.username',
                             'session.session_name',
+                            'token.warning', //Update warning clmn
                             'token.pass',
-                            //'token.warning',
                             'token.strike',
                             'token.tokens',
                             [
