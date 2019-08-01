@@ -171,9 +171,11 @@ extract($_GET);
         if (eleID == "pass" && old_value == 3) {
             document.getElementById(eleID.concat(id)).value = 3;  
         } 
+        /*
         else if(eleID == "warning" && old_value == 1) {
             document.getElementByID(eleID.concat(id)).value = 1;
         }
+        */
         else {
             document.getElementById(eleID.concat(id)).value = add(old_value);
         }
@@ -197,7 +199,7 @@ extract($_GET);
 
         $.ajax({
             method:'POST',
-            data:{tokenID:tokenID, /*warning:warning,*/ pass:pass, strike:strike, tokens:tokens},
+            data:{tokenID:tokenID, pass:pass, strike:strike, tokens:tokens},
             dataType:'text',
             success:function(result){
                 // alert(result);

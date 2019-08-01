@@ -57,7 +57,7 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
             $tokens = $_POST["tokens"];
 
             $tokenModel = Tokens::findOne(['id' => $tokenID]);
-            $tokenModel->warning = $warning; // Update warning column
+            //$tokenModel->warning = $warning; // Update warning column
             $tokenModel->pass = $pass;
             $tokenModel->strike = $strike;
             $tokenModel->tokens = $tokens;
