@@ -79,7 +79,7 @@ class RewardSearch extends Reward
                 'id',
                 'user.username',
                 'session.session_name',
-                'token.warning', //Update warning clmn
+                //'token.warning', //Update warning clmn
                 'token.pass',
                 'token.strike',
                 'token.tokens',
