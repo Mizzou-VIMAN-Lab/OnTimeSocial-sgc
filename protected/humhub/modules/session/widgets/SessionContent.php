@@ -42,7 +42,7 @@ class SessionContent extends Widget
         $dataProvider->setSort([
             'attributes' => [
                 'user.username',
-                'warning', // Update warning clmn
+                //'warning', // Update warning clmn
                 'pass',
                 'strike',
                 'tokens'
