@@ -330,7 +330,7 @@ class SessionModelMembership extends Behavior
         $tokens->user_id = $userId;
         $tokens->pass = 0;
         $tokens->warning = 0;
-        //$tokens->strike = 0;
+        $tokens->strike = 0;
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
         
