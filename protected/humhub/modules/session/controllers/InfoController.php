@@ -51,7 +51,7 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
 
         if(isset($_POST["tokenID"]) && isset($_POST["pass"]) && isset($_POST["strike"]) && isset($_POST["tokens"])){
             $tokenID = $_POST["tokenID"];
-            $warning = $_POST["warning"]; // Update warning column
+            //$warning = $_POST["warning"]; // Update warning column
             $pass = $_POST["pass"];
             $strike = $_POST["strike"];
             $tokens = $_POST["tokens"];
