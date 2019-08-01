@@ -328,11 +328,13 @@ class SessionModelMembership extends Behavior
         // Initialize Token vars in database
         $tokens = new Tokens();
         $tokens->user_id = $userId;
-        $tokens->warning = 0;
+        //$tokens->warning = 0;
         $tokens->pass = 0;
         $tokens->strike = 0;
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
+        
+        echo $tokens;
 
         $reward = new Reward();
         $reward->user_id = $userId;
