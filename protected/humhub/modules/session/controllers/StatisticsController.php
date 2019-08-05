@@ -27,7 +27,7 @@ class StatisticsController extends \humhub\modules\content\components\ContentCon
     public function actionIndex()
     {
         // $session = $this->contentContainer;
-        $this->subLayout = '@humhub/modules/session/views/eeg/index';
+        $this->subLayout = '@humhub/modules/session/views/statistics/index';
 
         $members = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session)->all();
         return $this->render('index');
