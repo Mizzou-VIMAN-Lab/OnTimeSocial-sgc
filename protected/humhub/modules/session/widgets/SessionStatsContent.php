@@ -39,8 +39,6 @@ class SessionStatsContent extends Widget
                 'username',
             ]
         ]);
-        
-        return $session;
-        //return $this->render('sessionStatsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
+        return $this->render('sessionStatsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
     }
 }
