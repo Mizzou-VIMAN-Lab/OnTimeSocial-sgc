@@ -45,16 +45,6 @@ class Menu extends \humhub\widgets\BaseMenu
             'isActive' => (Yii::$app->controller->id == "info" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session"),
         ));
 
-        /* Add adding Session Statistics info */
-        $this->addItem(array(
-            'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'Session Stats'),
-            'group' => 'modules',
-            'url' => $this->session->createUrl('/session/sessionStats'),
-            'icon' => '<i class="fa fa-smile-o"></i>',
-            'sortOrder' => 100,
-            'isActive' => (Yii::$app->controller->id == "sessionStats" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session"),
-        ));
-
         $this->addItem(array(
             'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'EEG Data'),
             'group' => 'modules',
@@ -72,6 +62,16 @@ class Menu extends \humhub\widgets\BaseMenu
             'icon' => '<i class="fa fa-smile-o"></i>',
             'sortOrder' => 100,
             'isActive' => (Yii::$app->controller->id == "expressions" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session")
+        ));
+
+         /* Add adding Session Statistics info */
+         $this->addItem(array(
+            'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'Session Stats'),
+            'group' => 'modules',
+            'url' => $this->session->createUrl('/session/expressions'),
+            'icon' => '<i class="fa fa-smile-o"></i>',
+            'sortOrder' => 100,
+            'isActive' => (Yii::$app->controller->id == "expressions" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session"),
         ));
 
         parent::init();
