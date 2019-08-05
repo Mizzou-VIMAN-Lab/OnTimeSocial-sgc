@@ -42,3 +42,4 @@ class SessionStatsContent extends Widget
         return $this->render('sessionStatsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
     }
 }
+?>
