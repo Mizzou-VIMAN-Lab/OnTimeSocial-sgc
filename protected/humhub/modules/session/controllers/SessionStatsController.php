@@ -28,7 +28,7 @@ class SessionStatsController extends \humhub\modules\content\components\ContentC
 
     public function actionIndex()
     {
-        $this->subLayout = '@humhub/modules/session/views/sessionStats/index';
+        $this->subLayout = '@humhub/modules/session/views/statistics/index';
 
         $members = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session)->all();
         return $this->render('index');

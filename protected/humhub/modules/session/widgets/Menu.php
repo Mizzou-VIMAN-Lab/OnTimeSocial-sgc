@@ -68,10 +68,10 @@ class Menu extends \humhub\widgets\BaseMenu
         $this->addItem(array(
             'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'Session Stats'),
             'group' => 'modules',
-            'url' => $this->session->createUrl('/session/sessionStats'),
+            'url' => $this->session->createUrl('/session/statistics'),
             'icon' => '<i class="fa fa-pie-chart"></i>',
             'sortOrder' => 100,
-            'isActive' => (Yii::$app->controller->id == "sessionStats" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session")
+            'isActive' => (Yii::$app->controller->id == "statistics" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session")
         ));
 
         parent::init();

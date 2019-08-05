@@ -15,3 +15,7 @@ use yii\widgets\ActiveForm;
 use humhub\modules\space\models\Space;
 
 ?>
+
+<div>
+    <?php echo "Hello, World!"; ?>
+</div>
