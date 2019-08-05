@@ -17,11 +17,8 @@ $session = $this->context->contentContainer;
             <?php echo \humhub\modules\session\widgets\Menu::widget(['session' => $session]); ?>
             <br>
         </div>
-            
-            <?= $content;
-            /*\humhub\modules\session\widgets\SessionStatsContent::widget([
+            <?= \humhub\modules\session\widgets\SessionStatsContent::widget([
                     'contentContainer' => $session
-            ]) */
-            ?>
+            ]) ?>
     </div>
 </div>
