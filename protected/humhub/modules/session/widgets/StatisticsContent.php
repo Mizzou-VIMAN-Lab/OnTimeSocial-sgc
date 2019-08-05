@@ -36,11 +36,7 @@ class StatisticsContent extends Widget
                 'username',
             ]
         ]);
-        // return $this->content;
-        // return $this->render('eegcontent', [
-        //         'dataProvider' => $dataProvider
-        //     ]);
 
-        return $this->render('statisticsContent', ['session' => $this->contentContainer,   'members' => $query->all()]);
+        return $this->render('statisticsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
     }
 }
