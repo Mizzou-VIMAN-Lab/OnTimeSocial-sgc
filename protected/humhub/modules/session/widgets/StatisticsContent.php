@@ -1,7 +1,4 @@
 <?php
-/**
- * Developed my Roland Oruche, University of Missouri
- */
 
 namespace humhub\modules\session\widgets;
 
@@ -13,7 +10,7 @@ use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\SessionMembership;
 use humhub\modules\content\components\ContentContainerActiveRecord;
 
-class SessionStatsContent extends Widget 
+class StatisticsContent extends Widget
 {
     /**
      * @var string
@@ -39,7 +36,11 @@ class SessionStatsContent extends Widget
                 'username',
             ]
         ]);
-        return $this->render('sessionStatsContent', ['session' => $this->contentContainer, 'members' => $query->all()]);
+        // return $this->content;
+        // return $this->render('eegcontent', [
+        //         'dataProvider' => $dataProvider
+        //     ]);
+
+        return $this->render('statisticsContent', ['session' => $this->contentContainer,   'members' => $query->all()]);
     }
 }
-?>

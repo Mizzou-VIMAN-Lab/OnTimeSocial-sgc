@@ -2,8 +2,7 @@
 /**
  * Developed my Roland Oruche, University of Missouri
  */
-
-$session = $this->context->contentContainer;
+    $session = $this->context->contentContainer;
 ?>
 <div class="container session-layout-container">
     <div class="row">
@@ -17,7 +16,7 @@ $session = $this->context->contentContainer;
             <?php echo \humhub\modules\session\widgets\Menu::widget(['session' => $session]); ?>
             <br>
         </div>
-            <?= \humhub\modules\session\widgets\SessionStatsContent::widget([
+            <?= \humhub\modules\session\widgets\StatisticsContent::widget([
                     'contentContainer' => $session
             ]) ?>
     </div>

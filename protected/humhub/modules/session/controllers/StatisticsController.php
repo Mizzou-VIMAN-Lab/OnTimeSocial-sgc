@@ -1,7 +1,4 @@
 <?php
-/**
- * Developed my Roland Oruche, University of Missouri
- */
 
 namespace humhub\modules\session\controllers;
 
@@ -10,9 +7,10 @@ use yii\data\ActiveDataProvider;
 use humhub\modules\admin\components\Controller;
 use humhub\modules\stream\actions\ContentContainerStream;
 
-class SessionStatsController extends \humhub\modules\content\components\ContentContainerController
+class StatisticsController extends \humhub\modules\content\components\ContentContainerController
 {
-     /**
+
+    /**
      * @inheritdoc
      */
     public $adminOnly = false;
@@ -28,11 +26,10 @@ class SessionStatsController extends \humhub\modules\content\components\ContentC
 
     public function actionIndex()
     {
-        $this->subLayout = '@humhub/modules/session/views/statistics/index';
+        // $session = $this->contentContainer;
+        $this->subLayout = '@humhub/modules/session/views/eeg/index';
 
         $members = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session)->all();
         return $this->render('index');
     }
-
-
 }
