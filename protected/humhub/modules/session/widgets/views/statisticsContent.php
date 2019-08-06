@@ -17,7 +17,9 @@ use humhub\modules\session\widgets\StatisticsContent;
 use humhub\widgets\Tabs;
 ?>
 
-<div class="layout-nav-container">
+<link rel="stylesheet" type="text/css" href="protected/humhub/modules/session/views/statistics/stats-content.css">
+
+<div class="tab-container">
     <?php
         echo Tabs::widget([
             'items' => [
