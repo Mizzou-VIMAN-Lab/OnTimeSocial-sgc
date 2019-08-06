@@ -17,22 +17,20 @@ use humhub\modules\session\widgets\StatisticsContent;
 use humhub\widgets\Tabs;
 ?>
 
-<div class="row">
-    <div class="col-md-2 layout-nav-container">
-        <?php
-            echo Tabs::widget([
-                'items' => [
-                    [
-                        'label' => 'Main',
-                        'content' => 'This is some content...',
-                        'active' => true
-                    ],
-                    [
-                        'label' => 'Details',
-                        'content' => 'This is also some content...'
-                    ],
+<div class="col-md-2 layout-nav-container">
+    <?php
+        echo Tabs::widget([
+            'items' => [
+                [
+                    'label' => 'Main',
+                    'content' => 'This is some content...',
+                    'active' => true
                 ],
-            ]);
-        ?>
-    </div>
+                [
+                    'label' => 'Details',
+                    'content' => 'This is also some content...'
+                ],
+            ],
+        ]);
+    ?>
 </div>
