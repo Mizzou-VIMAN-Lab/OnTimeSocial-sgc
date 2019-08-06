@@ -13,30 +13,24 @@ use yii\helpers\Html;
 use \humhub\compat\CHtml;
 use yii\widgets\ActiveForm;
 use humhub\modules\space\models\Space;
+use humhub\modules\session\widgets\StatisticsContent;
 use humhub\widgets\Tabs;
-
 ?>
 
-<div>
-    <?php
-        echo Tabs::widget([
-            'items' => [
-                [
-                    'label' => 'Main',
-                    'options' => [
-                        'style' => 'width:80px; min-width:80px; text-align:center;'
-                    ],
-                    'content' => 'This is some content...',
-                    'active' => true
-                ],
-                [
-                    'label' => 'Details',
-                    'options' => [
-                        'style' => 'width:80px; min-width:80px; text-align:center;'
-                    ],
-                    'content' => 'This is also some content...'
-                ],
+<?php
+    echo Tabs::widget([
+        'items' => [
+            [
+                'label' => 'Main',
+                'content' => 'This is some content...',
+                'options' => ['style' => 'min-width:200px;'],
+                'active' => true
             ],
-        ]);
-    ?>
-</div>
+            [
+                'label' => 'Details',
+                'content' => 'This is also some content...',
+                'options' => ['style' => 'min-width:200px;']
+            ],
+        ],
+    ]);
+?>
