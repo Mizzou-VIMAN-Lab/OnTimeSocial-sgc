@@ -23,13 +23,13 @@ use humhub\widgets\Tabs;
             [
                 'label' => 'Main',
                 'content' => 'This is some content...',
-                'options' => ['style' => 'min-width:200px;'],
+                'options' => ['style' => 'background-color:orange;'],
                 'active' => true
             ],
             [
                 'label' => 'Details',
                 'content' => 'This is also some content...',
-                'options' => ['style' => 'min-width:200px;'],
+                'options' => ['style' => 'backgroundColor:orange;'],
             ],
         ],
     ]);
