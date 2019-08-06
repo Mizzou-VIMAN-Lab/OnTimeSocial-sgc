@@ -13,9 +13,21 @@ use yii\helpers\Html;
 use \humhub\compat\CHtml;
 use yii\widgets\ActiveForm;
 use humhub\modules\space\models\Space;
+use humhub\widgets\Tabs;
 
 ?>
 
-<div>
-    <?php echo "Hello, World!"; ?>
-</div>
+<?php
+    echo Tabs::widget([
+        'items' => [
+            [
+                'label' => 'Main',
+                'content' => 'This is some content...',
+                'active' => true
+            ],
+            [
+                'label' => 'Details',
+                'content' => 'This is also some content...'
+            ],
+        ],
+    ]);
