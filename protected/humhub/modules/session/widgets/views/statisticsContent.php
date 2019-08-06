@@ -17,18 +17,26 @@ use humhub\widgets\Tabs;
 
 ?>
 
-<?php
-    echo Tabs::widget([
-        'items' => [
-            [
-                'label' => 'Main',
-                'content' => 'This is some content...',
-                'active' => true
+<div>
+    <?php
+        echo Tabs::widget([
+            'items' => [
+                [
+                    'label' => 'Main',
+                    'options' => [
+                        'style' => 'width:80px; min-width:80px; text-align:center;'
+                    ],
+                    'content' => 'This is some content...',
+                    'active' => true
+                ],
+                [
+                    'label' => 'Details',
+                    'options' => [
+                        'style' => 'width:80px; min-width:80px; text-align:center;'
+                    ],
+                    'content' => 'This is also some content...'
+                ],
             ],
-            [
-                'label' => 'Details',
-                'content' => 'This is also some content...'
-            ],
-        ],
-    ]);
-?>
+        ]);
+    ?>
+</div>
