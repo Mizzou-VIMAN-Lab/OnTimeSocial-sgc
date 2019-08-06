@@ -31,3 +31,4 @@ use humhub\widgets\Tabs;
             ],
         ],
     ]);
+?>
